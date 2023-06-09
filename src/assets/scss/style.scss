@@ -1,0 +1,56 @@
+@import url(common/fonts.scss);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Raleway';
+    font-weight: 400;
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+
+body {
+    max-width: 1920px;
+    width: 100%;
+    margin: auto;
+    background: #141414;
+}
+
+@mixin media($size) {
+    @media (max-width:#{$size}px) {
+        @content;
+    }
+}
+
+.more {
+    display: flex;
+    gap: 15px;
+    padding: 10px 15px;
+    color: white;
+    background: #149A03;
+    border-radius: 10px;
+}
+
+@import '@/components/Navbar/Navbar.scss',
+'@/components/Upcoming/Upcoming.scss',
+'@/components/Movies/Movies.scss',
+'@/components/InfoBlock/InfoBlock.scss',
+'@/components/Top10/TopRate.scss',
+'@/components/Footer/Footer.scss',
+'@/components/Content/Content.scss',
+'@/components/Search/Search.scss';
